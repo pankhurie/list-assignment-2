@@ -1,3 +1,6 @@
+/** Compute the length of a list using method foldRight.
+  * The signature of the method should be:
+  * def length[A](l: List[A]): Int      */
 
 object LengthOfList extends App {
   type A = Int

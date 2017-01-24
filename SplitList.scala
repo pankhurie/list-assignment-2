@@ -1,3 +1,8 @@
+/**
+  * Write a function that splits a list elements into a pair of lists on the basis of given boolean function.
+  * The signature of the method should be:
+  * def splitList[A](l:List[A],f:A=>Boolean):(List[A],List[B])  **/
+
 import scala.collection.mutable.ListBuffer
 
 object SplitList extends App {
@@ -9,11 +14,10 @@ object SplitList extends App {
 
   def splitList[A](l: List[A], f: A => Boolean): (List[A], List[B]) = {
 
-
-    val tempBuffer1= new ListBuffer[A]()
-    val tempBuffer2= new ListBuffer[B]()
-    l.map(x => if (f(x)) tempBuffer1+=x else  tempBuffer2+=x)
-    (tempBuffer1.toList,tempBuffer2.toList)
+    val tempBuffer1 = new ListBuffer[A]()
+    val tempBuffer2 = new ListBuffer[B]()
+    l.map(x => if (f(x)) tempBuffer1 += x else tempBuffer2 += x)
+    (tempBuffer1.toList, tempBuffer2.toList)
 
   }
 }
