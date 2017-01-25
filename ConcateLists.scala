@@ -15,11 +15,11 @@ object ConcateLists extends App {
 
   def concateList[A](l1: List[A], l2: List[A]): List[A] = {
 
-    val tryBuffer = new ListBuffer[A]
-    for (a <- l1) tryBuffer += a
-    for (b <- l2) tryBuffer += b
+    val tempBuffer = new ListBuffer[A]
+    for (a <- l1) tempBuffer += a
+    for (b <- l2) tempBuffer += b
 
-    tryBuffer.toList
+    tempBuffer.toList
 
   }
 

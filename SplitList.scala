@@ -14,10 +14,19 @@ object SplitList extends App {
 
   def splitList[A](l: List[A], f: A => Boolean): (List[A], List[B]) = {
 
-    val tempBuffer1 = new ListBuffer[A]()
-    val tempBuffer2 = new ListBuffer[B]()
-    l.map(x => if (f(x)) tempBuffer1 += x else tempBuffer2 += x)
-    (tempBuffer1.toList, tempBuffer2.toList)
+    //USING LIST BUFFER   :
+      // val tempBuffer1 = new ListBuffer[A]()
+      //val tempBuffer2 = new ListBuffer[B]()
+      //val l1= List[Int]()
+      //val l2=List[B]()
+      //  l.map(x => if (f(x)) tempBuffer1 += x else tempBuffer2 += x)
+      // (tempBuffer1.toList, tempBuffer2.toList)
 
+    //WITHOUT LIST BUFFER :
+
+      val l1 = (for (i <- 0 to l.length - 1 if (f(l(i)))) yield l(i)).toList
+      val l2 = (for (i <- 0 to l.length - 1 if (!f(l(i)))) yield l(i)).toList
+
+      (l1, l2)
   }
 }

@@ -4,11 +4,12 @@
   * The signature of the method should be:
   * def hasSubsequence[A](list:List[A],sub:List[A]):Boolean
   * */
+
 object SubListInList extends App {
   type A = Int
   val srcList = List[A](1, 2, 3, 4, 5)
   val subList = List[A](1, 2)
-  val subList2 = List[A](5, 3, 4)
+  val subList2 = List[A]( 1,5, 4)
 
 
   println(s"$subList is a subsequence of $srcList : ${hasSubsequence(srcList, subList)} ")
