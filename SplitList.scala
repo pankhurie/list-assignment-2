@@ -17,8 +17,6 @@ object SplitList extends App {
     //USING LIST BUFFER   :
       // val tempBuffer1 = new ListBuffer[A]()
       //val tempBuffer2 = new ListBuffer[B]()
-      //val l1= List[Int]()
-      //val l2=List[B]()
       //  l.map(x => if (f(x)) tempBuffer1 += x else tempBuffer2 += x)
       // (tempBuffer1.toList, tempBuffer2.toList)
 
